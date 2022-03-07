@@ -1,0 +1,389 @@
+/batch
+/config,noeldb,1     ! force off writing results to database
+*get,_wallstrt,active,,time,wall
+! ANSYS input file written by Workbench version 2021 R2
+! File used for geometry attach: C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\FlatPlate_files\dp0\SYS-4\DM\SYS-4.agdb
+/title,FlatPlate--Steady-State Thermal 7 (H5)
+! ****** Begin Custom Load Command Snippet ******
+/COM, ACT Extensions:
+/COM,     LSDYNA, 2021.1
+/COM,     5f463412-bd3e-484b-87e7-cbc0a665e474, wbex
+/COM,
+! ****** End   Custom Load Command Snippet ******
+*DIM,_wb_ProjectScratch_dir,string,248
+_wb_ProjectScratch_dir(1) = 'C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\_ProjectScratch\Scr16F6\'
+*DIM,_wb_SolverFiles_dir,string,248
+_wb_SolverFiles_dir(1) = 'C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\FlatPlate_files\dp0\SYS-11\MECH\'
+*DIM,_wb_userfiles_dir,string,248
+_wb_userfiles_dir(1) = 'C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\FlatPlate_files\user_files\'
+/com,--- Data in consistent NMM units. See Solving Units in the help system for more information.
+/units,MPA
+/nopr
+/wb,file,start              !  signify a WB generated input file
+/prep7
+! Turn off shape checking because checks already performed inside WB mesher.
+! See help system for more information.
+SHPP,OFF,,NOWARN
+/nolist
+etcon,set             ! allow ANSYS to choose best KEYOP's for 180x elements, resets any applicable keyopt to MAPDL defaults
+/com,*********** Nodes for the whole assembly ***********
+nblock,3,,29
+(1i9,3e20.9e3)
+        1    -1.000000000E+01     1.000000000E+01     1.000000000E+01
+        2    -1.000000000E+01     1.000000000E+01    -1.000000000E+01
+        3    -1.000000000E+01    -1.000000000E+01    -1.000000000E+01
+        4    -1.000000000E+01    -1.000000000E+01     1.000000000E+01
+        5     1.000000000E+01    -1.000000000E+01    -1.000000000E+01
+        6     1.000000000E+01    -1.000000000E+01     1.000000000E+01
+        7     1.000000000E+01     1.000000000E+01    -1.000000000E+01
+        8     1.000000000E+01     1.000000000E+01     1.000000000E+01
+        9     1.734723476E-15    -1.734723476E-15    -1.000000000E+01
+       10    -1.000000000E+01    -1.734723476E-15    -1.000000000E+01
+       11     1.734723476E-15    -1.000000000E+01    -1.000000000E+01
+       12     1.000000000E+01     0.000000000E+00    -1.000000000E+01
+       13     0.000000000E+00     1.000000000E+01    -1.000000000E+01
+       14     1.734723476E-15    -1.734723476E-15     1.000000000E+01
+       15    -1.000000000E+01    -1.734723476E-15     1.000000000E+01
+       16     1.734723476E-15    -1.000000000E+01     1.000000000E+01
+       17     1.000000000E+01     0.000000000E+00     1.000000000E+01
+       18     0.000000000E+00     1.000000000E+01     1.000000000E+01
+       19     0.000000000E+00     1.000000000E+01     0.000000000E+00
+       20    -1.000000000E+01     1.000000000E+01     0.000000000E+00
+       21     1.000000000E+01     1.000000000E+01     0.000000000E+00
+       22     1.000000000E+01     0.000000000E+00     0.000000000E+00
+       23     1.000000000E+01    -1.000000000E+01     0.000000000E+00
+       24     5.204170428E-15    -1.000000000E+01     0.000000000E+00
+       25    -1.000000000E+01    -1.000000000E+01     0.000000000E+00
+       26    -1.000000000E+01    -5.204170428E-15     0.000000000E+00
+       27     2.349104707E-15    -2.265609219E-15    -2.079309028E-16
+-1
+/wb,elem,start            !  set before creation of elements
+/com,*********** Elements for Body 1 "Solid" ***********
+et,1,278
+eblock,19,solid,,48
+(19i9)
+        1        1        1        1        0        0        0        0        8        0        1       14       26       19       19       27       27       27       27
+        1        1        1        1        0        0        0        0        8        0        2        9       27       19       19       26       26       26       26
+        1        1        1        1        0        0        0        0        8        0        3       14       24       26       26       27       27       27       27
+        1        1        1        1        0        0        0        0        8        0        4        9       24       27       27       26       26       26       26
+        1        1        1        1        0        0        0        0        8        0        5        9       27       22       22       19       19       19       19
+        1        1        1        1        0        0        0        0        8        0        6       14       22       27       27       19       19       19       19
+        1        1        1        1        0        0        0        0        8        0        7        9       24       22       22       27       27       27       27
+        1        1        1        1        0        0        0        0        8        0        8       14       24       27       27       22       22       22       22
+        1        1        1        1        0        0        0        0        8        0        9        8       18       22       22       14       14       14       14
+        1        1        1        1        0        0        0        0        8        0       10       18       22       19       19       21       21       21       21
+        1        1        1        1        0        0        0        0        8        0       11        4       16       25       25       26       26       26       26
+        1        1        1        1        0        0        0        0        8        0       12       15       20       19       19       26       26       26       26
+        1        1        1        1        0        0        0        0        8        0       13       14       19       15       15       18       18       18       18
+        1        1        1        1        0        0        0        0        8        0       14        9       19       22       22       12       12       12       12
+        1        1        1        1        0        0        0        0        8        0       15        5        9       22       22       12       12       12       12
+        1        1        1        1        0        0        0        0        8        0       16        4       14       16       16       26       26       26       26
+        1        1        1        1        0        0        0        0        8        0       17        9       24       26       26       10       10       10       10
+        1        1        1        1        0        0        0        0        8        0       18       12       19       22       22       21       21       21       21
+        1        1        1        1        0        0        0        0        8        0       19       14       16       26       26       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       20       16       25       26       26       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       21       14       22       19       19       18       18       18       18
+        1        1        1        1        0        0        0        0        8        0       22        8       14       22       22       17       17       17       17
+        1        1        1        1        0        0        0        0        8        0       23        7       19       12       12       21       21       21       21
+        1        1        1        1        0        0        0        0        8        0       24        2       13       20       20        9        9        9        9
+        1        1        1        1        0        0        0        0        8        0       25        7       12       19       19       13       13       13       13
+        1        1        1        1        0        0        0        0        8        0       26       10       26       25       25       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       27        3       11       10       10       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       28        3       10       25       25       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       29        9       10       11       11       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       30        9       12       13       13       19       19       19       19
+        1        1        1        1        0        0        0        0        8        0       31        2        9       26       26       10       10       10       10
+        1        1        1        1        0        0        0        0        8        0       32        9       19       20       20       26       26       26       26
+        1        1        1        1        0        0        0        0        8        0       33        8       22       18       18       21       21       21       21
+        1        1        1        1        0        0        0        0        8        0       34        2        9       20       20       26       26       26       26
+        1        1        1        1        0        0        0        0        8        0       35        9       13       20       20       19       19       19       19
+        1        1        1        1        0        0        0        0        8        0       36        9       11       23       23       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       37        5        9       11       11       23       23       23       23
+        1        1        1        1        0        0        0        0        8        0       38        9       23       22       22       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       39        5       22        9        9       23       23       23       23
+        1        1        1        1        0        0        0        0        8        0       40        1       20       19       19       15       15       15       15
+        1        1        1        1        0        0        0        0        8        0       41       14       17       16       16       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       42        6       24       16       16       17       17       17       17
+        1        1        1        1        0        0        0        0        8        0       43       14       22       17       17       24       24       24       24
+        1        1        1        1        0        0        0        0        8        0       44       17       24       22       22       23       23       23       23
+        1        1        1        1        0        0        0        0        8        0       45        6       23       24       24       17       17       17       17
+        1        1        1        1        0        0        0        0        8        0       46        1       15       19       19       18       18       18       18
+        1        1        1        1        0        0        0        0        8        0       47        4       14       26       26       15       15       15       15
+        1        1        1        1        0        0        0        0        8        0       48       14       15       19       19       26       26       26       26
+-1
+!Material Id = {A0FC53E9-09DD-4C44-9772-5D96524BF118}
+/wb,elem,end               !  done creating elements
+/com,*********** Send User Defined Coordinate System(s) ***********
+csys,0
+toffst,273.15,  ! Temperature offset from absolute zero
+/wb,mat,start              !  starting to send materials
+/com,*********** Send Materials ***********
+Temperature = 'TEMP' ! Temperature
+MP,DENS,1,7.85e-09,	! tonne mm^-3
+MP,ALPX,1,1.2e-05,	! C^-1
+MP,C,1,434000000,	! mm^2 s^-2 C^-1
+MP,KXX,1,60.5,	! tonne mm s^-3 C^-1
+MP,RSVX,1,0.00017,	! ohm mm
+MP,EX,1,200000,	! tonne s^-2 mm^-1
+MP,NUXY,1,0.3,
+MP,MURX,1,10000,
+MP,UVID,1,bd7ef191-5294-4ca9-a991-183c40be71d8
+MP,UMID,1,59002a79-71c2-428e-906b-55d7dbee100e
+
+/wb,mat,end                !  done sending materials
+!************************* Model Summary ********************
+!Solid,	Structural Steel,	matid,	1
+!************************* End Model Summary ********************
+! get the diagonal of the bounding box. Needed later for other things
+*get,_xmin,node,,mnloc,x
+*get,_ymin,node,,mnloc,y
+*get,_zmin,node,,mnloc,z
+*get,_xmax,node,,mxloc,x
+*get,_ymax,node,,mxloc,y
+*get,_zmax,node,,mxloc,z
+_ASMDIAG=(_xmax-_xmin)*(_xmax-_xmin)+(_ymax-_ymin)*(_ymax-_ymin)+(_zmax-_zmin)*(_zmax-_zmin)
+_ASMDIAG=SQRT(_ASMDIAG)
+/wb,contact,start          !  starting to send contact
+/wb,contact,end            !  done creating contacts
+CMBLOCK,NODES   ,NODE,       27
+(8i10)
+         1         2         3         4         5         6         7         8
+         9        10        11        12        13        14        15        16
+        17        18        19        20        21        22        23        24
+        25        26        27
+/com,*********** Send Named Selection as Node Component ***********
+CMBLOCK,SGFACE1 ,NODE,        9
+(8i10)
+         5         6         7         8        12        17        21        22
+        23
+/com,*********** Send Named Selection as Node Component ***********
+CMBLOCK,SGFACE2 ,NODE,        9
+(8i10)
+         1         2         7         8        13        18        19        20
+        21
+/com,*********** Send Named Selection as Node Component ***********
+CMBLOCK,SGFACE3 ,NODE,        9
+(8i10)
+         1         2         3         4        10        15        20        25
+        26
+/com,*********** Send Named Selection as Node Component ***********
+CMBLOCK,SGFACE4 ,NODE,        9
+(8i10)
+         3         4         5         6        11        16        23        24
+        25
+/com,*********** Send Named Selection as Node Component ***********
+CMBLOCK,SGFACE5 ,NODE,        9
+(8i10)
+         2         3         5         7         9        10        11        12
+        13
+/com,*********** Send Named Selection as Node Component ***********
+CMBLOCK,SGFACE6 ,NODE,        9
+(8i10)
+         1         4         6         8        14        15        16        17
+        18
+CMBLOCK,ELEMENTS,ELEM,       48
+(8i10)
+         1         2         3         4         5         6         7         8
+         9        10        11        12        13        14        15        16
+        17        18        19        20        21        22        23        24
+        25        26        27        28        29        30        31        32
+        33        34        35        36        37        38        39        40
+        41        42        43        44        45        46        47        48
+
+CMBLOCK,NSFACE6 ,NODE,        9
+(8i10)
+         1         4         6         8        14        15        16        17
+        18
+CMBLOCK,NSFACE1 ,NODE,        9
+(8i10)
+         5         6         7         8        12        17        21        22
+        23
+CMBLOCK,NSFACE2 ,NODE,        9
+(8i10)
+         1         2         7         8        13        18        19        20
+        21
+CMBLOCK,NSFACE3 ,NODE,        9
+(8i10)
+         1         2         3         4        10        15        20        25
+        26
+CMBLOCK,NSFACE4 ,NODE,        9
+(8i10)
+         3         4         5         6        11        16        23        24
+        25
+CMBLOCK,NSFACE5 ,NODE,        9
+(8i10)
+         2         3         5         7         9        10        11        12
+        13
+/golist
+/wb,load,start             !  starting to send loads
+/com,*********** Define Temperature Constraint ***********
+CMBLOCK,_CM287  ,NODE,        9
+(8i10)
+         5         6         7         8        12        17        21        22
+        23
+/com,*********** Create "Heat Flux" ***********
+et,2,152
+eblock,10,,,8
+(15i9)
+       97        2        2        2        0       23       11        5        5
+       98        2        2        2        0       23       24       11       11
+       99        2        2        2        0        6       24       23       23
+      100        2        2        2        0        6       16       24       24
+      101        2        2        2        0       24        3       11       11
+      102        2        2        2        0       24       25        3        3
+      103        2        2        2        0       16       25       24       24
+      104        2        2        2        0       16        4       25       25
+-1
+esel,s,type,,2
+keyop,2,8,1      ! include heat flux
+esel,all
+/com,*********** Create "Heat Flow" ***********
+et,3,152
+eblock,10,,,8
+(15i9)
+      105        3        3        3        0       21       18        8        8
+      106        3        3        3        0       21       19       18       18
+      107        3        3        3        0        7       19       21       21
+      108        3        3        3        0        7       13       19       19
+      109        3        3        3        0       19        1       18       18
+      110        3        3        3        0       19       20        1        1
+      111        3        3        3        0       13       20       19       19
+      112        3        3        3        0       13        2       20       20
+-1
+esel,s,type,,3
+keyop,3,8,1      ! include heat flux
+esel,all
+fcum,add                   ! add nodal forces up (needed in case have loads on the same edge,vertex)
+nsel,all
+nsel,all
+fcum                       ! reset default on fcum command since done sending WB F loads
+/com,*********** Create "Convection" ***********
+et,4,152
+eblock,10,,,8
+(15i9)
+      113        4        4        4        0       12       13        7        7
+      114        4        4        4        0       12        9       13       13
+      115        4        4        4        0        5        9       12       12
+      116        4        4        4        0        5       11        9        9
+      117        4        4        4        0        9        2       13       13
+      118        4        4        4        0        9       10        2        2
+      119        4        4        4        0       11       10        9        9
+      120        4        4        4        0       11        3       10       10
+-1
+esel,s,type,,4
+keyop,4,8,2.
+keyop,4,13,0
+esel,all
+/com,*********** Create "Internal Heat Generation" ***********
+CMBLOCK,_CM323  ,ELEM,       48
+(8i10)
+         1         2         3         4         5         6         7         8
+         9        10        11        12        13        14        15        16
+        17        18        19        20        21        22        23        24
+        25        26        27        28        29        30        31        32
+        33        34        35        36        37        38        39        40
+        41        42        43        44        45        46        47        48
+
+/com,***************** Define Uniform Initial temperature ***************
+tunif,22.
+/gst,on,on
+fini
+*get,_numnode,node,0,count
+*get,_numelem,elem,0,count
+*get, _MAXELEMNUM, elem, 0, NUM, MAX
+*get, _MAXNODENUM, node, 0, NUM, MAX
+*get, _MAXELEMTYPE, etyp, 0, NUM, MAX
+*get, _MAXREALCONST, real, 0, NUM, MAX
+/go
+/wb,load,end               !  done creating loads
+/com,--- Number of total nodes = %_numnode%
+/com,--- Number of contact elements = 24
+/com,--- Number of spring elements = 0
+/com,--- Number of bearing elements = 0
+/com,--- Number of solid elements = 48
+/com,--- Number of condensed parts = 0
+/com,--- Number of total elements = %_numelem%
+*get,_wallbsol,active,,time,wall
+/com,****************************************************************************
+/com,*************************    SOLUTION       ********************************
+/com,****************************************************************************
+/solu
+antype,0                   ! static analysis
+!eqsl,sparse               ! using sparse solver which is default so no eqsl command needed
+cntr,print,1               ! print out contact info and also make no initial contact an error
+rescontrol,,none                 ! Do not keep any restart files
+dmpoption,emat,no             ! Don't combine emat file for DANSYS
+dmpoption,esav,no             ! Don't combine esav file for DANSYS
+/com,****************************************************
+/com,******************* SOLVE FOR LS 1 OF 1 ****************
+d,_CM287,temp,-20.
+esel,s,type,,2
+nsle
+sf,all,hflux,15000.
+nsel,all
+esel,all
+esel,s,type,,3
+nsle
+sf,all,hflux,125.
+nsel,all
+esel,all
+esel,s,type,,4
+nsle
+sf,all,conv,20000.,5.
+nsel,all
+esel,all
+bfe,_CM323,hgen,,300.
+/nopr
+/gopr
+autots,on
+nsub,1,10,1
+time,1.
+outres,erase
+outres,all,none
+outres,nsol,all
+outres,rsol,all
+outres,eangl,all
+outres,veng,all
+outres,fflux,all
+outres,cont,all
+/nopr
+esel,s,type,,4
+cm,_elmisc,elem
+esel,all
+/gopr
+outres,misc,all,_elmisc
+cnvtol,heat,,.001,,1.e-003    ! Program Controlled. Set MINREF equivalent of 1e-6 Watts
+! *********** WB SOLVE COMMAND ***********
+! check interactive state
+*get,ANSINTER_,active,,int
+*if,ANSINTER_,ne,0,then
+/eof
+*endif
+solve
+/com *************** Write FE CONNECTORS ********* 
+CEWRITE,file,ce,,INTE
+/com,****************************************************
+/com,*************** FINISHED SOLVE FOR LS 1 *************
+*get,_wallasol,active,,time,wall
+/post1
+xmlo,ENCODING,ISO-8859-1
+xmlo,parm
+/xml,parm,xml
+fini
+/gopr
+*get,_walldone,active,,time,wall
+_preptime=(_wallbsol-_wallstrt)*3600
+_solvtime=(_wallasol-_wallbsol)*3600
+_posttime=(_walldone-_wallasol)*3600
+_totaltim=(_walldone-_wallstrt)*3600
+*get,_dlbratio,active,0,solu,dlbr
+*get,_combtime,active,0,solu,comb
+*get,_ssmode,active,0,solu,ssmm
+*get,_ndofs,active,0,solu,ndof
+/com,--- Total number of nodes = %_numnode%
+/com,--- Total number of elements = %_numelem%
+/com,--- Element load balance ratio = %_dlbratio%
+/com,--- Time to combine distributed files = %_combtime%
+/com,--- Sparse memory mode = %_ssmode%
+/com,--- Number of DOF = %_ndofs%
+/wb,file,end               ! done with WB generated input

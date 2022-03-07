@@ -1,0 +1,88 @@
+# encoding: utf-8
+# 2021 R2
+SetScriptVersion(Version="21.2.209")
+template1 = GetTemplate(
+    TemplateName="Steady-State Thermal",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+Save(Overwrite=True)
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+Save(Overwrite=True)
+geometry1.Edit()
+model1.Exit()
+geometry1.Exit()
+system1.Delete()
+system2 = template1.CreateSystem()
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.Edit()
+geometry2.Exit()
+modelComponent2 = system2.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+model2.Exit()
+model2.Edit()
+geometry2.Edit()
+geometry2.Exit()
+geometry2.Edit()
+model2.Exit()
+geometry2.Exit()
+modelComponent2.Refresh()
+model2.Edit()
+model2.Exit()
+geometry2.Edit()
+modelComponent2.Refresh()
+model2.Edit()
+template2 = GetTemplate(TemplateName="Mesh")
+geometryComponent1 = system2.GetComponent(Name="Geometry")
+system3 = template2.CreateSystem(
+    ComponentsToShare=[geometryComponent1],
+    Position="Right",
+    RelativeTo=system2)
+meshComponent1 = system3.GetComponent(Name="Mesh")
+meshComponent1.Refresh()
+mesh1 = system3.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+mesh1.Exit()
+system3.Delete()
+geometry2.Exit()
+model2.Exit()
+template3 = GetTemplate(TemplateName="Mechanical APDL")
+componentTemplate1 = GetComponentTemplate(Name="ANSYSSetupCellTemplate")
+system4 = template3.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=modelComponent2, TransferName=None, ToComponentTemplate=componentTemplate1)],
+    RelativeTo=system2)
+model2.Edit()
+system4.Delete()
+template4 = GetTemplate(TemplateName="Mechanical Model")
+engineeringDataComponent1 = system2.GetComponent(Name="Engineering Data")
+system5 = template4.CreateSystem(
+    ComponentsToShare=[engineeringDataComponent1, geometryComponent1, modelComponent2],
+    Position="Right",
+    RelativeTo=system2)
+system5.Delete()
+system6 = template2.CreateSystem(
+    ComponentsToShare=[geometryComponent1],
+    Position="Right",
+    RelativeTo=system2)
+meshComponent2 = system6.GetComponent(Name="Mesh")
+meshComponent2.Refresh()
+mesh2 = system6.GetContainer(ComponentName="Mesh")
+mesh2.Edit()
+system7 = system2.Duplicate(
+    ComponentsToShare=[engineeringDataComponent1],
+    RelativeTo=system2)
+system7.Delete()
+mesh2.Exit()
+system6.Delete()
+model2.Exit()
+Save(Overwrite=True)
