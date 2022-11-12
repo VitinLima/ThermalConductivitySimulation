@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<EngineeringData version="21.2.0.240" versiondate="01/06/2021 14:03:00">
+<EngineeringData version="22.1.0.216" versiondate="14/11/2021 15:10:00">
   <Notes>
   </Notes>
   <Materials>
@@ -66,9 +66,10 @@
             <Qualifier name="Field Variable Compatible">Temperature</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
             </ParameterValue>
             <ParameterValue parameter="pa7" format="float">
@@ -118,9 +119,10 @@
             <Qualifier name="Field Variable Compatible">Temperature</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
             </ParameterValue>
             <ParameterValue parameter="pa11" format="float">
@@ -165,9 +167,10 @@
             <Qualifier name="Symbol">Cᵨ</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
             </ParameterValue>
             <ParameterValue parameter="pa13" format="float">
@@ -196,9 +199,10 @@
             <Qualifier name="Field Variable Compatible">Temperature</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
             </ParameterValue>
             <ParameterValue parameter="pa14" format="float">
@@ -327,9 +331,10 @@
             <Qualifier name="Field Variable Compatible">Temperature</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
             </ParameterValue>
             <ParameterValue parameter="pa25" format="float">

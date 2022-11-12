@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<EngineeringData version="21.2.0.240" versiondate="01/06/2021 14:03:00">
+<EngineeringData version="22.1.0.216" versiondate="14/11/2021 15:10:00">
   <Notes>
   </Notes>
   <Materials>
@@ -57,9 +57,10 @@
             <Qualifier name="Localized Name">Density</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
               <Qualifier name="Localized Name">Interpolation Options</Qualifier>
             </ParameterValue>
@@ -105,9 +106,10 @@
             <Qualifier name="Localized Name">Isotropic Secant Coefficient of Thermal Expansion</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
               <Qualifier name="Localized Name">Interpolation Options</Qualifier>
             </ParameterValue>
@@ -149,9 +151,10 @@
             <Qualifier name="Localized Name">Specific Heat Constant Pressure</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
               <Qualifier name="Localized Name">Interpolation Options</Qualifier>
             </ParameterValue>
@@ -178,9 +181,10 @@
             <Qualifier name="Localized Name">Isotropic Thermal Conductivity</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
               <Qualifier name="Localized Name">Interpolation Options</Qualifier>
             </ParameterValue>
@@ -284,9 +288,10 @@
             <Qualifier name="Localized Name">Isotropic Elasticity</Qualifier>
             <ParameterValue parameter="pa6" format="string">
               <Data>Interpolation Options</Data>
-              <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+              <Qualifier name="AlgorithmType">Linear Multivariate (Qhull)</Qualifier>
               <Qualifier name="Normalized">True</Qualifier>
               <Qualifier name="Cached">True</Qualifier>
+              <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="BETA">AlgorithmType$$Linear Multivariate (CGAL)$$EngineeringData.CGAL</Qualifier>
               <Qualifier name="Localized Name">Interpolation Options</Qualifier>
             </ParameterValue>

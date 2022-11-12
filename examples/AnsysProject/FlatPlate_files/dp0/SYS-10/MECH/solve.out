@@ -12,10 +12,10 @@
 
 
  ***************************************************************
- *            ANSYS 2021 R2          LEGAL NOTICES             *
+ *            ANSYS 2022 R1          LEGAL NOTICES             *
  ***************************************************************
  *                                                             *
- * Copyright 1971-2021 ANSYS, Inc.  All rights reserved.       *
+ * Copyright 1971-2022 ANSYS, Inc.  All rights reserved.       *
  * Unauthorized use, distribution or duplication is            *
  * prohibited.                                                 *
  *                                                             *
@@ -58,14 +58,37 @@
  *                                                             *
  ***************************************************************
 
- 2021 R2 
+ 2022 R1 
      
  Point Releases and Patches installed:   
      
- Academic Student 2021 R2
- Aqwa 2021 R2
- EnSight 2021 R2 
- FENSAP-ICE 2021 R2  
+ Ansys, Inc. Products 2022 R1
+ Autodyn 2022 R1 
+ SpaceClaim 2022 R1  
+ CFX (includes CFD-Post) 2022 R1 
+ Chemkin 2022 R1 
+ EnSight 2022 R1 
+ FENSAP-ICE 2022 R1  
+ Fluent (includes CFD-Post) 2022 R1  
+ Polyflow (includes CFD-Post) 2022 R1
+ Forte (includes EnSight) 2022 R1
+ TurboGrid 2022 R1   
+ Aqwa 2022 R1
+ Mechanical Products 2022 R1 
+ ACIS Geometry Interface 2022 R1 
+ AutoCAD Geometry Interface 2022 R1  
+ Catia, Version 4 Geometry Interface 2022 R1 
+ Catia, Version 5 Geometry Interface 2022 R1 
+ Catia, Version 6 Geometry Interface 2022 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2022 R1
+ Creo Parametric Geometry Interface 2022 R1  
+ Inventor Geometry Interface 2022 R1 
+ JTOpen Geometry Interface 2022 R1   
+ NX Geometry Interface 2022 R1   
+ Parasolid Geometry Interface  2022 R1   
+ Solid Edge Geometry Interface 2022 R1   
+ SOLIDWORKS Geometry Interface 2022 R1   
+ Academic Student 2022 R1
 
 
           *****  ANSYS COMMAND LINE ARGUMENTS  *****
@@ -74,13 +97,13 @@
   DISTRIBUTED MEMORY PARALLEL REQUESTED
        2 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
     TOTAL OF     2 CORES REQUESTED
-  INPUT FILE NAME              = C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProject\_ProjectScratch\ScrBC05\dummy.dat
-  OUTPUT FILE NAME             = C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProject\_ProjectScratch\ScrBC05\solve.out
+  INPUT FILE NAME              = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr244A\dummy.dat
+  OUTPUT FILE NAME             = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr244A\solve.out
   START-UP FILE MODE           = NOREAD
   STOP FILE MODE               = NOREAD
 
- RELEASE= 2021 R2              BUILD= 21.2      UP20210601   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file0  19:21:11  MAR 01, 2022 CP=      0.641
+ RELEASE= 2022 R1              BUILD= 22.1      UP20211129   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file0  18:25:25  NOV 03, 2022 CP=      0.188
 
 
  PARAMETER _DS_PROGRESS =     999.0000000    
@@ -89,11 +112,11 @@
 
 
 
- *** NOTE ***                            CP =       1.234   TIME= 19:21:13
+ *** NOTE ***                            CP =       0.406   TIME= 18:25:28
  The /CONFIG,NOELDB command is not valid in a Distributed ANSYS          
  solution.  Command is ignored.                                          
 
- *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.3536111    
+ *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4244444    
 
  TITLE= 
  FlatPlate--Steady-State Thermal 6 (G5)                                        
@@ -106,17 +129,17 @@
  SET PARAMETER DIMENSIONS ON  _WB_PROJECTSCRATCH_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_PROJECTSCRATCH_DIR(1) = C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProject\_ProjectScratch\ScrBC05\
+ PARAMETER _WB_PROJECTSCRATCH_DIR(1) = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr244A\
 
  SET PARAMETER DIMENSIONS ON  _WB_SOLVERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_SOLVERFILES_DIR(1) = C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProject\FlatPlate_files\dp0\SYS-10\MECH\
+ PARAMETER _WB_SOLVERFILES_DIR(1) = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\dp0\SYS-10\MECH\
 
  SET PARAMETER DIMENSIONS ON  _WB_USERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_USERFILES_DIR(1) = C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProject\FlatPlate_files\user_files\
+ PARAMETER _WB_USERFILES_DIR(1) = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\user_files\
  --- Data in consistent NMM units. See Solving Units in the help system for more
 
  MPA UNITS SPECIFIED FOR INTERNAL    
@@ -130,10 +153,10 @@
 
  INPUT  UNITS ARE ALSO SET TO MPA 
 
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2     ***
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R1          22.1     ***
  DISTRIBUTED Ansys Mechanical Enterprise Academic Student      
 
- 00000000  VERSION=WINDOWS x64   19:21:13  MAR 01, 2022 CP=      1.250
+ 00000000  VERSION=WINDOWS x64   18:25:28  NOV 03, 2022 CP=      0.422
 
  FlatPlate--Steady-State Thermal 6 (G5)                                        
 
@@ -155,7 +178,7 @@
  ***************** Define Uniform Initial temperature ***************
 
 
- ***** ROUTINE COMPLETED *****  CP =         1.266
+ ***** ROUTINE COMPLETED *****  CP =         0.672
 
 
  --- Number of total nodes = 27
@@ -166,7 +189,7 @@
  --- Number of condensed parts = 0
  --- Number of total elements = 48
 
- *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.3536111    
+ *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4247222    
  ****************************************************************************
  *************************    SOLUTION       ********************************
  ****************************************************************************
@@ -239,26 +262,26 @@
 
  *ENDIF
 
- *** NOTE ***                            CP =       1.344   TIME= 19:21:13
+ *** NOTE ***                            CP =       0.781   TIME= 18:25:30
  The automatic domain decomposition logic has selected the MESH domain   
  decomposition method with 2 processes per solution.                     
 
  *****  ANSYS SOLVE    COMMAND  *****
 
- *** WARNING ***                         CP =       1.344   TIME= 19:21:13
+ *** WARNING ***                         CP =       0.781   TIME= 18:25:31
  Element shape checking is currently inactive.  Issue SHPP,ON or         
  SHPP,WARN to reactivate, if desired.                                    
 
- *** NOTE ***                            CP =       1.344   TIME= 19:21:13
+ *** NOTE ***                            CP =       0.797   TIME= 18:25:31
  The model data was checked and warning messages were found.             
   Please review output or errors file (                                  
- C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProjec 
- ct\_ProjectScratch\ScrBC05\file0.err ) for these warning messages.      
+ D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_Proje 
+ ectScratch\Scr244A\file0.err ) for these warning messages.              
 
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2     ***
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R1          22.1     ***
  DISTRIBUTED Ansys Mechanical Enterprise Academic Student      
 
- 00000000  VERSION=WINDOWS x64   19:21:13  MAR 01, 2022 CP=      1.344
+ 00000000  VERSION=WINDOWS x64   18:25:31  NOV 03, 2022 CP=      0.797
 
  FlatPlate--Steady-State Thermal 6 (G5)                                        
 
@@ -272,7 +295,7 @@
    OFFSET TEMPERATURE FROM ABSOLUTE ZERO . . . . .  273.15    
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
- *** NOTE ***                            CP =       1.359   TIME= 19:21:13
+ *** NOTE ***                            CP =       0.797   TIME= 18:25:31
  The conditions for direct assembly have been met.  No .emat or .erot    
  files will be produced.                                                 
 
@@ -341,21 +364,21 @@
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        48  SOLID278      0.031   0.000651
- Time at end of element matrix formulation CP = 1.578125.                
+        1        48  SOLID278      0.047   0.000977
+ Time at end of element matrix formulation CP = 1.015625.                
 
  DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
   Number of equations =          18,    Maximum wavefront =     11
 
-  Local memory allocated for solver              =      0.181 MB
-  Local memory required for in-core solution     =      0.173 MB
-  Local memory required for out-of-core solution =      0.173 MB
+  Process memory allocated for solver              =     0.157 MB
+  Process memory required for in-core solution     =     0.149 MB
+  Process memory required for out-of-core solution =     0.149 MB
 
-  Total memory allocated for solver              =      0.360 MB
-  Total memory required for in-core solution     =      0.343 MB
-  Total memory required for out-of-core solution =      0.343 MB
+  Total memory allocated for solver                =     0.311 MB
+  Total memory required for in-core solution       =     0.296 MB
+  Total memory required for out-of-core solution   =     0.296 MB
 
- *** NOTE ***                            CP =       1.594   TIME= 19:21:13
+ *** NOTE ***                            CP =       1.062   TIME= 18:25:36
  The Distributed Sparse Matrix Solver is currently running in the        
  in-core memory mode.  This memory mode uses the most amount of memory   
  in order to avoid using the hard drive as much as possible, which most  
@@ -370,12 +393,12 @@
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        48  SOLID278      0.016   0.000326
+        1        48  SOLID278      0.031   0.000651
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        48  SOLID278      0.016   0.000326
+        1        48  SOLID278      0.000   0.000000
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -391,19 +414,19 @@
  ****************************************************
  *************** FINISHED SOLVE FOR LS 1 *************
 
- *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.3538889    
+ *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4275000    
 
  FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =         2.406
+ ***** ROUTINE COMPLETED *****  CP =         1.172
 
 
 
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2     ***
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R1          22.1     ***
  DISTRIBUTED Ansys Mechanical Enterprise Academic Student      
 
- 00000000  VERSION=WINDOWS x64   19:21:15  MAR 01, 2022 CP=      2.453
+ 00000000  VERSION=WINDOWS x64   18:25:40  NOV 03, 2022 CP=      1.203
 
  FlatPlate--Steady-State Thermal 6 (G5)                                        
 
@@ -411,7 +434,7 @@
 
           ***** ANSYS RESULTS INTERPRETATION (POST1) *****
 
- *** NOTE ***                            CP =       2.453   TIME= 19:21:15
+ *** NOTE ***                            CP =       1.234   TIME= 18:25:40
  Reading results into the database (SET command) will update the current 
  displacement and force boundary conditions in the database with the     
  values from the results file for that load set.  Note that any          
@@ -429,33 +452,35 @@
  EXIT THE ANSYS POST1 DATABASE PROCESSOR
 
 
- ***** ROUTINE COMPLETED *****  CP =         2.453
+ ***** ROUTINE COMPLETED *****  CP =         1.297
 
 
 
  PRINTOUT RESUMED BY /GOP
 
- *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.3541667    
+ *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4277778    
 
- PARAMETER _PREPTIME =     0.000000000    
+ PARAMETER _PREPTIME =     1.000000000    
 
- PARAMETER _SOLVTIME =     1.000000000    
+ PARAMETER _SOLVTIME =     10.00000000    
 
  PARAMETER _POSTTIME =     1.000000000    
 
- PARAMETER _TOTALTIM =     2.000000000    
+ PARAMETER _TOTALTIM =     12.00000000    
 
  *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  1.00000000    
 
- *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.383782400    
+ *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.299831600    
 
  *GET  _SSMODE   FROM  ACTI  ITEM=SOLU SSMM  VALUE=  2.00000000    
 
  *GET  _NDOFS    FROM  ACTI  ITEM=SOLU NDOF  VALUE=  18.0000000    
+
+ /FCLEAN COMMAND REMOVING ALL LOCAL FILES
  --- Total number of nodes = 27
  --- Total number of elements = 48
  --- Element load balance ratio = 1
- --- Time to combine distributed files = 0.3837824
+ --- Time to combine distributed files = 0.2998316
  --- Sparse memory mode = 2
  --- Number of DOF = 18
 
@@ -467,14 +492,14 @@
 
 +--------- D I S T R I B U T E D   A N S Y S   S T A T I S T I C S ------------+
 
-Release: 2021 R2            Build: 21.2       Update: UP20210601   Platform: WINDOWS x64 
-Date Run: 03/01/2022   Time: 19:21     Process ID: 7672
+Release: 2022 R1            Build: 22.1       Update: UP20211129   Platform: WINDOWS x64 
+Date Run: 11/03/2022   Time: 18:25     Process ID: 12528
 Operating System: Windows 10  (Build: 19043)
 
 Processor Model: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 
-Compiler: Intel(R) FORTRAN Compiler Version 19.0.0  (Build: 20190206)
-          Intel(R) C/C++ Compiler Version 19.0.0  (Build: 20190206)
+Compiler: Intel(R) Fortran Compiler Version 19.0.5  (Build: 20190815)
+          Intel(R) C/C++ Compiler Version 19.0.5  (Build: 20190815)
           Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
           BLAS Library supplied by Intel(R) MKL
 
@@ -485,7 +510,7 @@ Number of processes requested           :    2
 Number of threads per process requested :    1
 Total number of cores requested         :    2 (Distributed Memory Parallel)               
 MPI Type: INTELMPI
-MPI Version: Intel(R) MPI Library 2019 Update 9 for Windows* OS
+MPI Version: Intel(R) MPI Library 2019 Update 10 for Windows* OS
 
 
 GPU Acceleration: Not Requested
@@ -495,29 +520,29 @@ Input File: dummy.dat
 
   Core                Machine Name   Working Directory
  -----------------------------------------------------
-     0             DESKTOP-71B23Q0   C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProject\_ProjectScratch\ScrBC05
-     1             DESKTOP-71B23Q0   C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\AnsysProject\_ProjectScratch\ScrBC05
+     0             DESKTOP-71B23Q0   D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr244A
+     1             DESKTOP-71B23Q0   D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr244A
  
-Latency time from master to core     1 =   10.073 microseconds
+Latency time from master to core     1 =   57.855 microseconds
  
-Communication speed from master to core     1 =    88.81 MB/sec
+Communication speed from master to core     1 =  1076.66 MB/sec
 
-Total CPU time for main thread                    :        3.2 seconds
-Total CPU time summed for all threads             :        2.6 seconds
+Total CPU time for main thread                    :        1.7 seconds
+Total CPU time summed for all threads             :        1.5 seconds
 
-Elapsed time spent obtaining a license            :       10.8 seconds
-Elapsed time spent pre-processing model (/PREP7)  :        0.1 seconds
-Elapsed time spent solution - preprocessing       :        0.3 seconds
-Elapsed time spent computing solution             :        0.3 seconds
-Elapsed time spent solution - postprocessing      :        0.4 seconds
-Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+Elapsed time spent obtaining a license            :        2.0 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        1.2 seconds
+Elapsed time spent solution - preprocessing       :        1.9 seconds
+Elapsed time spent computing solution             :        5.9 seconds
+Elapsed time spent solution - postprocessing      :        0.3 seconds
+Elapsed time spent post-processing model (/POST1) :        0.3 seconds
  
 Equation solver used                              :            Sparse (symmetric)
 Equation solver effective I/O rate                :        0.0 GB/sec
 
-Maximum total memory used                         :       86.0 MB
-Maximum total memory allocated                    :     3136.0 MB
-Total physical memory available                   :          6 GB
+Sum of memory used on all processes               :       86.0 MB
+Sum of memory allocated on all processes          :     3136.0 MB
+Physical memory available                         :          6 GB
 
 Total amount of I/O written to disk               :        0.0 GB
 Total amount of I/O read from disk                :        0.0 GB
@@ -531,7 +556,7 @@ Total amount of I/O read from disk                :        0.0 GB
  |                                                                           |
  |---------------------------------------------------------------------------|
  |                                                                           |
- | Ansys 2021 R2               Build 21.2         UP20210601     WINDOWS x64 |
+ | Ansys 2022 R1               Build 22.1         UP20211129     WINDOWS x64 |
  |                                                                           |
  |---------------------------------------------------------------------------|
  |                                                                           |
@@ -540,7 +565,7 @@ Total amount of I/O read from disk                :        0.0 GB
  |                                                                           |
  |---------------------------------------------------------------------------|
  |                                                                           |
- |        CP Time      (sec) =          2.641       Time  =  19:21:16        |
- |        Elapsed Time (sec) =         23.000       Date  =  03/01/2022      |
+ |        CP Time      (sec) =          1.453       Time  =  18:25:42        |
+ |        Elapsed Time (sec) =         23.000       Date  =  11/03/2022      |
  |                                                                           |
  *---------------------------------------------------------------------------*

@@ -1,8 +1,8 @@
 /batch
 /config,noeldb,1     ! force off writing results to database
 *get,_wallstrt,active,,time,wall
-! ANSYS input file written by Workbench version 2021 R2
-! File used for geometry attach: C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\FlatPlate_files\dp0\SYS-4\DM\SYS-4.agdb
+! ANSYS input file written by Workbench version 2022 R1
+! File used for geometry attach: D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\dp0\SYS-4\DM\SYS-4.agdb
 /title,FlatPlate--Steady-State Thermal 7 (H5)
 ! ****** Begin Custom Load Command Snippet ******
 /COM, ACT Extensions:
@@ -11,11 +11,11 @@
 /COM,
 ! ****** End   Custom Load Command Snippet ******
 *DIM,_wb_ProjectScratch_dir,string,248
-_wb_ProjectScratch_dir(1) = 'C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\_ProjectScratch\Scr16F6\'
+_wb_ProjectScratch_dir(1) = 'D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr8C39\'
 *DIM,_wb_SolverFiles_dir,string,248
-_wb_SolverFiles_dir(1) = 'C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\FlatPlate_files\dp0\SYS-11\MECH\'
+_wb_SolverFiles_dir(1) = 'D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\dp0\SYS-11\MECH\'
 *DIM,_wb_userfiles_dir,string,248
-_wb_userfiles_dir(1) = 'C:\Users\160047412\Desktop\workbench\Projects\ANSYS_Thermal\Code\AnsysProject\FlatPlate_files\user_files\'
+_wb_userfiles_dir(1) = 'D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\user_files\'
 /com,--- Data in consistent NMM units. See Solving Units in the help system for more information.
 /units,MPA
 /nopr
@@ -380,6 +380,7 @@ _totaltim=(_walldone-_wallstrt)*3600
 *get,_combtime,active,0,solu,comb
 *get,_ssmode,active,0,solu,ssmm
 *get,_ndofs,active,0,solu,ndof
+/fclean				!clean distributed files
 /com,--- Total number of nodes = %_numnode%
 /com,--- Total number of elements = %_numelem%
 /com,--- Element load balance ratio = %_dlbratio%
