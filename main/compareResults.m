@@ -5,6 +5,12 @@ cd(problemDir);
 
 FID = fopen("NodeResults.txt");
 
+if FID==-1
+  disp(['Compare results script finilized. No results to compare. Execution time: ', num2str(toc), ' s']);
+  cd(programPWD);
+  return;
+end
+
 UA = -1;
 
 while (l = fgetl(FID)) != -1

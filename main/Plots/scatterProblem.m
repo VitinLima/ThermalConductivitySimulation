@@ -1,5 +1,15 @@
+if ischar(idxE)
+  if strcmp(idxE, 'all')
+    idx = 1:rows(E);
+  end
+else
+  idx = idxE;
+end
+
+idxN = unique(E(idx,:)(:));
+
 scatter3(N(idxN,1), N(idxN,2), N(idxN,3), [], 'b', 'marker', '*', 'displayname', 'Nodes');
-for i = 1:length(N)
+for i = idxN'
 	text(N(i,1), N(i,2), N(i,3), ['  ', num2str(i)]);
 end
 

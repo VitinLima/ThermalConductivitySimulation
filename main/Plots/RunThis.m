@@ -1,11 +1,11 @@
 close all;
-##clc;
+clc;
 
 figure;
 hold on;
 
-idxE = 1:rows(E);
-##idxE = [23, 18, 25, 30, 5, 14];
+idxE = 'all';
+##idxE = [27, 29, 28, 17, 26, 4];
 idxN = 1:rows(N);
 idxBC = 4;
 
@@ -22,7 +22,7 @@ for i = 1:length(choice)
 		case 4
 			plotFaces;
 		case 5
-			plotElement;
+			plotElements;
 		case 6
 			plotMesh;
 		case 7
@@ -30,13 +30,17 @@ for i = 1:length(choice)
 		case 8
 			plotSolution;
 		case 9
+      scatterElements;
+    case 10
 			scatterProblem;
-		case 10
-			scatterSolution;
 		case 11
-			quiverTemperatureGradient;
+			scatterSolution;
 		case 12
+			quiverTemperatureGradient;
+		case 13
 			quiverHeatFlux;
+    case 14
+      outlineElements;
 	end
 end
 

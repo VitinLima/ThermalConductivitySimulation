@@ -27,3 +27,5 @@ disp(['Number of nodes: ', num2str(rows(N))]);
 disp(['Number of elements: ', num2str(rows(E))]);
 disp(['Minimum temperature: ', num2str(min(U))]);
 disp(['Maximum temperature: ', num2str(max(U))]);
+
+findExternalFaces;
