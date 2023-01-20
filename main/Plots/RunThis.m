@@ -5,7 +5,7 @@ figure;
 hold on;
 
 idxE = 'all';
-##idxE = [27, 29, 28, 17, 26, 4];
+##idxE = [37, 39, 15, 36, 38, 7];
 idxN = 1:rows(N);
 idxBC = 4;
 

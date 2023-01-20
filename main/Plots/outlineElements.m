@@ -1,5 +1,5 @@
-close all;
-clc;
+##close all;
+##clc;
 
 if ischar(idxE)
   if strcmp(idxE, 'all')

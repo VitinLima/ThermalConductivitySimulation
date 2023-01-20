@@ -12,7 +12,7 @@ else
 end
 
 BF = findBoundaryFaces(E(idx,:));
-trisurf(BF, N(:,1), N(:,2), N(:,3), U, 'facecolor', 'interp');
+trisurf(BF, N(:,1), N(:,2), N(:,3), U, 'facecolor', 'interp', 'linestyle', 'none');
 
 ##Um = (U(E(:,1)) + U(E(:,2)) + U(E(:,3)) + U(E(:,4)))/4;
 ##tetramesh(E, N);

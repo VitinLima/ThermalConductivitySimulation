@@ -86,7 +86,7 @@ K = sparse(rows(N),rows(N));
 
 # Connections between nodes through the sub-elements
 
-% Thermal conductivity in W/mmºC
+% Thermal conductivity in W/mmÂºC
 kc = 0.060500*ones(rows(E),1);
 
 for i = 1:4

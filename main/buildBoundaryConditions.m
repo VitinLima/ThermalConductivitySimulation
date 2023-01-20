@@ -15,7 +15,7 @@ Fi = zeros(columns(K),1);
 
 for idx = 1:length(BC)
 	if strcmp(BC(idx).type, 'TEMPERATURE')
-		disp(['Applying temperature boundary condition, ', num2str(BC(idx).value(1)), ' ºC']);
+		disp(['Applying temperature boundary condition, ', num2str(BC(idx).value(1)), ' ÂºC']);
 		
 		U(BC(idx).targets) = BC(idx).value(1);
 		
@@ -60,7 +60,7 @@ for idx = 1:length(BC)
 		end
 		
 	elseif strcmp(BC(idx).type, 'HEATFLUX')
-		disp(['Applying heat flux boundary condition, ', num2str(BC(idx).value), ' W/mm²']);
+		disp(['Applying heat flux boundary condition, ', num2str(BC(idx).value), ' W/mmÂ²']);
 		
 		for i = 1:4
 			for j = 1:4
@@ -78,7 +78,7 @@ for idx = 1:length(BC)
 		end
 		
 	elseif strcmp(BC(idx).type, 'CONVECTION')
-		disp(['Applying convection boundary condition, ', num2str(BC(idx).value(1)), ' W/mm²ºC, ', num2str(BC(idx).value(2)), ' ºC']);
+		disp(['Applying convection boundary condition, ', num2str(BC(idx).value(1)), ' W/mmÂ²ÂºC, ', num2str(BC(idx).value(2)), ' ÂºC']);
 		
 		for i = 1:4
 			for j = 1:4
@@ -99,11 +99,18 @@ for idx = 1:length(BC)
 		end
 		
 	elseif strcmp(BC(idx).type, 'INTERNALHEATGENERATION')
-		disp(['Applying internal heat generation condition, ', num2str(BC(idx).value), ' W/mm³']);
 		
-		for i = 1:4
-			Fi(E(BC(idx).targets,i)) += accumarray(E(BC(idx).targets,i), V(E(BC(idx).targets,i))*BC(idx).value)(E(BC(idx).targets,i));
-		end
+    if strcmp(BC(idx).elementType, 'ELEM')
+      disp(['Applying internal heat generation condition, ', num2str(BC(idx).value), ' W/mmÂ³']);
+      for i = 1:4
+        Fi += accumarray(E(BC(idx).targets,i), VE(BC(idx).targets)*BC(idx).value/4, size(Fi));
+      end
+    elseif strcmp(BC(idx).elementType, 'NODE')
+      disp(['Applying internal heat generation condition, ', num2str(BC(idx).value), ' W/mmÂ³']);
+      Fi += accumarray(BC(idx).targets, VN(BC(idx).targets)*BC(idx).value, size(Fi));
+    else
+      disp(['Failed to apply boundary condition: Unknown element type "', BC(idx.elementType), '"']);
+    end
 		
 	elseif strcmp(BC(idx).type, 'IRRADIATION')
 		disp('Irradiation not yet implemented, ignoring.');
