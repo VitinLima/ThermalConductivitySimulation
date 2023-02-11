@@ -1,0 +1,63 @@
+# encoding: utf-8
+# 2023 R1
+SetScriptVersion(Version="23.1.153")
+system1 = GetSystem(Name="APDL")
+system1.Delete()
+system2 = GetSystem(Name="SYS 1")
+system2.Delete()
+Save(Overwrite=True)
+system3 = GetSystem(Name="SYS")
+setup1 = system3.GetContainer(ComponentName="Setup")
+setup1.Edit()
+template1 = GetTemplate(TemplateName="External Data")
+system4 = template1.CreateSystem(
+    Position="Left",
+    RelativeTo=system3)
+setup2 = system4.GetContainer(ComponentName="Setup")
+externalLoadFileData1 = setup2.AddDataFile(FilePath="C:/Users/160047412/Desktop/workbench/cubic test/cubic test_files/dp0/SYS/MECH/Results/OctaveResults")
+externalLoadFileDataProperty1 = externalLoadFileData1.GetDataProperty()
+externalLoadColumnData1 = externalLoadFileDataProperty1.GetColumnData(Name="ExternalLoadColumnData")
+externalLoadFileDataProperty1.SetColumnDataType(
+    ColumnData=externalLoadColumnData1,
+    DataType="Temperature")
+externalLoadFileData1.ModifyFileData(FilePath=r"C:\Users\160047412\Desktop\workbench\cubic test\cubic test_files\dp0\SYS\MECH\Results\OctaveResults")
+setup2.SetState()
+externalLoadFileData1.ModifyFileData(FilePath=r"C:\Users\160047412\Desktop\workbench\cubic test\cubic test_files\dp0\SYS\MECH\Results\OctaveResults")
+setup2.SetState()
+system4.Delete()
+system5 = template1.CreateSystem(
+    Position="Left",
+    RelativeTo=system3)
+setup3 = system5.GetContainer(ComponentName="Setup")
+externalLoadFileData2 = setup3.AddDataFile(FilePath="C:/Users/160047412/Desktop/workbench/cubic test/cubic test_files/dp0/SYS/MECH/Results/OctaveResults")
+externalLoadFileDataProperty2 = externalLoadFileData2.GetDataProperty()
+externalLoadColumnData2 = externalLoadFileDataProperty2.GetColumnData(Name="ExternalLoadColumnData")
+externalLoadFileDataProperty2.SetColumnDataType(
+    ColumnData=externalLoadColumnData2,
+    DataType="Node ID")
+externalLoadColumnData3 = externalLoadFileDataProperty2.GetColumnData(Name="ExternalLoadColumnData 1")
+externalLoadFileDataProperty2.SetColumnDataType(
+    ColumnData=externalLoadColumnData3,
+    DataType="Temperature")
+Save(Overwrite=True)
+setupComponent1 = system5.GetComponent(Name="Setup")
+setupComponent2 = system3.GetComponent(Name="Setup")
+setupComponent1.TransferData(TargetComponent=setupComponent2)
+setupComponent2.Update(AllDependencies=True)
+setup3.RereadDataFiles()
+setup3.SetState()
+externalLoadFileData2.ModifyFileData(FilePath=r"C:\Users\160047412\Desktop\workbench\cubic test\cubic test_files\dp0\SYS\MECH\workingDirectory\Results\OctaveResults")
+Save(Overwrite=True)
+setup3.RereadDataFiles()
+setupComponent1.Update(AllDependencies=True)
+setupComponent2.Update(AllDependencies=True)
+setup3.RereadDataFiles()
+setupComponent2.Update(AllDependencies=True)
+Save(Overwrite=True)
+model1 = system3.GetContainer(ComponentName="Model")
+model1.Exit()
+results1 = system3.GetContainer(ComponentName="Results")
+results1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)

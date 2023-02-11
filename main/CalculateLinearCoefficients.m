@@ -83,7 +83,7 @@ KD2 = formatSymbolicEquation(KD2);
 KD3 = formatSymbolicEquation(KD3);
 KD4 = formatSymbolicEquation(KD4);
 
-fopen('GeometricLinearCoefficients.txt', 'w');
+FID = fopen('GeometricLinearCoefficients.txt', 'w');
 
 fdisp(FID, strjoin({'KA1 = ', KA1}, ''));
 fdisp(FID, strjoin({'KA2 = ', KA2}, ''));

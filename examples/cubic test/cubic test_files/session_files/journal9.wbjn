@@ -1,0 +1,18 @@
+# encoding: utf-8
+# 2023 R1
+SetScriptVersion(Version="23.1.153")
+system1 = GetSystem(Name="SYS")
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Exit()
+results1.Edit()
+model1.Exit()
+setup1.Edit()
+model1.Exit()
+Save(Overwrite=True)

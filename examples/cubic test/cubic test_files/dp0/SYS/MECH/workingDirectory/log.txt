@@ -1,0 +1,26 @@
+All working fine
+Main script initiated.
+Load analysis script initiated.
+Loading mesh
+Detecting file format
+Initiating ANSYS Binary file loader
+Reading nodes
+Reading elements
+Step 2: Reading boundary conditions.
+Load file script finilized. Execution time: 1.672 s
+Build system script initiated.
+Build system script finilized. Execution time: 0.21281 s
+Build boundary conditions script initiated.
+Applying temperature boundary condition, 45 ÂºC
+Applying convection boundary condition, 3.1416 W/mmÂ²ÂºC, 22 ÂºC
+Applying internal heat generation condition, 0.2 W/mmÂ³
+Applying heat flow boundary condition, 20 W
+Applying heat flux boundary condition, 0.03 W/mmÂ²
+Build boundary conditions script finilized. Execution time: 0.44465 s
+Solve system script initiated.
+Solve system script finilized. Execution time: 0.00074601 s
+Main script finilized. Execution time: 1.6719 s
+Number of nodes: 76
+Number of elements: 177
+Minimum temperature: 22.4876
+Maximum temperature: 406.3891

@@ -1,5 +1,11 @@
 import csv
 import os
+import struct
+import pickle
+
+#Options
+solve = True
+export_as_binary = True
 
 #https://ansyshelp.ansys.com/account/secured?returnurl=/Views/Secured/corp/v231/en/act_script/act_script_examples_print_selected_element_faces.html
 g_elementTypeToElemFaceNodeIndices = {
@@ -27,6 +33,20 @@ def GetElementFaceNodes(element, element_face_index):
     element_node_indices = g_elementTypeToElemFaceNodeIndices[element.Type][element_face_index]
     return [element.NodeIds[element_node_index] for element_node_index in element_node_indices]
 
+def write_data(f, data_type, data):
+    packet_size = 1000
+    data_size = len(data)
+    for current_packet_idx in range(int(ceil(float(data_size)/packet_size))):
+        current_data_idx = current_packet_idx*packet_size
+        next_data_idx = min(current_data_idx+packet_size, data_size)
+        packet = data[current_data_idx:next_data_idx]
+        if data_type=='s':
+            data_bin = bytes(''.join(packet), 'utf-8')
+            f.write(data_bin)
+        else:
+            data_bin = struct.pack('{}'.format(len(packet)) + data_type, *packet)
+            f.write(data_bin)
+
 def export_properties(filename, data_object):
     with open('\\'.join([working_directory,filename]), 'w') as fp:
         for property_name in data_object.PropertyNames:
@@ -34,40 +54,45 @@ def export_properties(filename, data_object):
             fp.write(property_name + ',')
             fp.write(str(property_value) + '\n')
 
+def export_properties2(filename, data_object):
+    with open('\\'.join([working_directory,filename]), 'w') as fp:
+        for property_value in data_object.Properties:
+            fp.write(property_value.Name + ',')
+            fp.write(str(property_value) + '\n')
+
 def write_geometry_selection(project, current_analysis, geometry, mesh_data, named_selections, data_object, geometry_selection):
-    f.write('GeometrySelection' + ',')
+    f.write(bytes('GeometrySelection' + ',', 'utf-8'))
     selection_type = geometry_selection.SelectionType
-    f.write(str(selection_type) + ',' + str(geometry_selection.Ids.Count) + '\n')
+    f.write(bytes(str(selection_type) + ',' + str(geometry_selection.Ids.Count) + '\n', 'utf-8'))
     if selection_type==Ansys.ACT.Interfaces.Common.SelectionTypeEnum.GeometryEntities:
         for id in geometry_selection:
             geoType = str(geometry.GeoEntityById(id).Type)
             mesh_region = mesh_data.MeshRegionById(id)
-            f.write(geoType + ',')
-            if geoType == 'GeoFace':
-                f.write(str(mesh_region.NodeCount) + '\n' + str(mesh_region.NodeIds) + '\n')
-            elif geoType == 'GeoBody':
-                f.write(str(mesh_region.ElementCount) + '\n' + str(mesh_region.ElementIds) + '\n')
+            f.write(bytes(geoType + ',', 'utf-8'))
+            if geoType == 'GeoBody':
+                f.write(bytes(str(mesh_region.ElementCount) + '\n', 'utf-8'))
+                write_data(f, 'i',  [i for i in mesh_region.ElementIds])
+            elif geoType == 'GeoFace':
+                f.write(bytes(str(mesh_region.NodeCount) + '\n', 'utf-8'))
+                write_data(f, 'i',  [i for i in mesh_region.NodeIds])
+            elif geoType == 'GeoEdge':
+                f.write(bytes(str(mesh_region.NodeCount) + '\n', 'utf-8'))
+                write_data(f, 'i',  [i for i in mesh_region.NodeIds])
+            elif geoType == 'GeoVertex':
+                f.write(bytes(str(mesh_region.NodeCount) + '\n', 'utf-8'))
+                write_data(f, 'i',  [i for i in mesh_region.NodeIds])
     elif selection_type==Ansys.ACT.Interfaces.Common.SelectionTypeEnum.MeshElements:
-        f.write(str(geometry_selection.Ids) + '\n')
+        write_data(f, 'i', [i for i in geometry_selection.Ids])
     elif selection_type==Ansys.ACT.Interfaces.Common.SelectionTypeEnum.MeshNodes:
-        f.write(str(geometry_selection.Ids) + '\n')
+        write_data(f, 'i', [i for i in geometry_selection.Ids])
     elif selection_type==Ansys.ACT.Interfaces.Common.SelectionTypeEnum.MeshElementFaces:
-        for i in range(geometry_selection.Ids.Count):
-            element_id = geometry_selection.Ids[i]
-            f.write(str(element_id) + ',' + str(GetElementFaceNodes(mesh_data.ElementById(element_id), geometry_selection.ElementFaceIndices[i])) + '\n')
-
-def write_component_selection(project, current_analysis, geometry, mesh_data, named_selections, data_object, component_selection):
-    geometry_selection = geometry.GeoEntityById(component_selection)
-    f.write('GeometrySelection' + ',' + str(geometry_selection) + '\n')
-    f.write('ComponentSelection' + ',' + str(component_selection) + '\n')
-    named_selection = DataModel.GetObjectById(component_selection)
-    for p in named_selection.Properties:
-        f.write('\t' + p.Name + ',' + str(p.InternalValue) + '\n')
+        write_data(f, 'i', [i for element_id in range(geometry_selection.Ids.Count) for i in [geometry_selection.Ids[element_id]] + [geometry_selection.ElementFaceIndices[element_id]] + GetElementFaceNodes(mesh_data.ElementById(geometry_selection.Ids[element_id]), geometry_selection.ElementFaceIndices[element_id])])
 
 def write_boundary_condition(project, current_analysis, geometry, mesh_data, named_selections, data_object):
     if data_object.PropertyValue('State')=='suppressed':
         return
-    f.write('BC,' + data_object.Name + '\n')
+    f.write(bytes('BC,' + data_object.Name + '\n', 'utf-8'))
+    f.write(bytes('Type,' + data_object.Type + '\n', 'utf-8'))
     geometry_selection = data_object.PropertyValue('GeometrySelection')
     write_geometry_selection(project, current_analysis, geometry, mesh_data, named_selections, data_object, geometry_selection)
     for property_name in data_object.PropertyNames:
@@ -75,16 +100,30 @@ def write_boundary_condition(project, current_analysis, geometry, mesh_data, nam
             geometry_selection = data_object.PropertyValue(property_name)
         elif property_name=='ComponentSelection':
             component_selection = data_object.PropertyValue(property_name)
-            f.write(property_name + ',' + DataModel.GetObjectById(component_selection).Name + '\n')
+            f.write(bytes(property_name + ',' + DataModel.GetObjectById(component_selection).Name + '\n', 'utf-8'))
+        elif property_name=='Type':
+            pass
         else:
-            f.write(property_name + ',' + str(data_object.PropertyValue(property_name)) + '\n')
+            f.write(bytes(property_name + ',' + str(data_object.PropertyValue(property_name)) + '\n', 'utf-8'))
 
-working_directory = ExtAPI.DataModel.AnalysisByName('Steady-State Thermal').WorkingDir
-#current_analysis = ExtAPI.DataModel.AnalysisByName('Steady-State Thermal')
-#current_analysis.WriteInputFile('\\'.join([workingDir, 'workingInput.dat']))
+engineeringToolkitPath = os.environ['EngineeringToolkit']
+if not os.path.exists(engineeringToolkitPath):
+    raise ValueError('Engineering toolkit path not on system variables\nExiting')
+
+working_directory = os.path.join(ExtAPI.DataModel.AnalysisByName('Steady-State Thermal').WorkingDir, 'workingDirectory')
+if not os.path.exists(working_directory):
+    os.mkdir(working_directory)
+
+res = os.system('octave-gui --no-gui "' + os.path.join(engineeringToolkitPath, 'main', 'main.m') + '" pre-setup "' + working_directory + '"')
+if res==1:
+    raise ValueError('Setup cancelled\nExiting')
+
+Model.Mesh.Update()
 
 project = ExtAPI.DataModel.Project
+project.UnitSystem = Ansys.Mechanical.DataModel.Enums.UserUnitSystemType.StandardNMM
 current_analysis = project.Model.Analyses[0]
+solution = current_analysis.Solution
 
 geometry = current_analysis.GeoData
 mesh_data = current_analysis.MeshData
@@ -98,47 +137,63 @@ boundary_conditions = [i for i in current_analysis.DataObjects.NamesByType('Load
     [i for i in current_analysis.DataObjects.NamesByType('LoadThermalPerfectlyInsulated')] + \
     [i for i in current_analysis.DataObjects.NamesByType('LoadThermalHeatFlux')]
 
-bc = current_analysis.DataObjects.GetByName('Temperature 2')
-export_properties('properties_T2.txt', current_analysis.DataObjects.GetByName('Temperature 3'))
+print('Exporting analysis')
 
-try:
-    with open('\\'.join([working_directory,'BoundaryConditions.txt']), 'w') as f:
-        for data_object_name in boundary_conditions:
-            data_object = current_analysis.DataObjects.GetByName(data_object_name)
-            write_boundary_condition(project, current_analysis, geometry, mesh_data, named_selections, data_object)
-    
-    #for c in currentAnalysis.Children:
-    #    print(c.GetType().BaseType)
-        #if c.GetType().BaseType==Ansys.A).Automation.Mechanical.BoundaryConditions.GenericBoundaryCondition:
-            
-            #pass
-    #print(DataModel.Project.Model.Analyses)
-    
-    #solver = os.environ['OctaveEngineeringSimulations']
-    #if not os.path.exists(solver):
-    #    raise ValueError('Engineering toolkit path not on system variables\nExiting')
-    
-    #solver += '\\' + 'tmp'
-    #if not os.path.exists(solver):
-    #    os.mkdir(solver)
-    
-    #MeshData = DataModel.MeshDataByName('Global')
-    
-    ##ExtAPI.SelectionManager
-    ##ExtAPI.Tools.GetResultsDataFromFile
-    
-    with open('\\'.join([working_directory,'workingInput.csv']), 'w') as f:
+print('\tBoundary conditions')
+
+with open(os.path.join(working_directory,'BoundaryConditions'), 'wb') as f:
+    for data_object_name in boundary_conditions:
+        data_object = current_analysis.DataObjects.GetByName(data_object_name)
+        write_boundary_condition(project, current_analysis, geometry, mesh_data, named_selections, data_object)
+
+print('\tMesh')
+if export_as_binary:
+    #Export as Binary
+    with open(os.path.join(working_directory,'Meshing'), 'wb') as f:
+        f.write(bytes('ANSYS BIN\n', 'utf-8'))
+        
+        f.write(bytes(','.join(['Nodes', str(mesh_data.NodeCount), '\n']), 'utf-8'))
+        write_data(f, 'i', [n.Id for n in mesh_data.Nodes])
+        write_data(f, 'd', [i for n in mesh_data.Nodes for i in [n.X, n.Y, n.Z]])
+        
+        f.write(bytes(','.join(['Elements', str(mesh_data.ElementCount), '\n']), 'utf-8'))
+        write_data(f, 'i', [e.Id for e in mesh_data.Elements])
+        write_data(f, 'i', [i for e in mesh_data.Elements for i in [e.CornerNodeIds.Count] + [e.NodeIds.Count]])
+        write_data(f, 'd', [e.Area for e in mesh_data.Elements])
+        write_data(f, 'd', [e.Volume for e in mesh_data.Elements])
+        write_data(f, 'i', [i for e in mesh_data.Elements for i in e.NodeIds])
+        write_data(f, 'd', [i for e in mesh_data.Elements for i in e.Centroid])
+else:
+    #Export as ASCII
+    with open('\\'.join([working_directory,'Meshing']), 'w') as f:
+        f.write('ANSYS ASCII\n')
         writer = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC, lineterminator='\n')
         
-        f.write(' '.join(['Nodes', str(mesh_data.NodeCount), '\n']))
+        f.write(','.join(['Nodes', str(mesh_data.NodeCount), '\n']))
         writer.writerow(['Node id', 'X', 'Y', 'Z'])
         writer.writerows([[n.Id] + [n.X] + [n.Y] + [n.Z] for n in mesh_data.Nodes])
         
-        f.write(' '.join(['Elements', str(mesh_data.ElementCount), '\n']))
+        f.write(','.join(['Elements', str(mesh_data.ElementCount), '\n']))
         writer.writerow(['Element id', 'Element type', 'Element area', 'Element volume', 'Nodes', 'Centroid'])
         writer.writerows([[e.Id] + [str(e.Type)] + [e.Area] + [e.Volume] + [i for i in e.NodeIds] + [i for i in e.Centroid] for e in mesh_data.Elements])
-        
-    
-except Exception as e:
-    print(e)
-    
+
+print('Analysis exported.')
+
+if solve:
+    res = os.system('octave-gui --no-gui "' + os.path.join(engineeringToolkitPath, 'main', 'main.m') + '" "' + working_directory + '"')
+    if res==1:
+        raise ValueError('Something went wrong when solving problem.\nSee log file.\nExiting')
+    else:
+        solution_children = [i.GetType() for i in solution.Children]
+        if Ansys.ACT.Automation.Mechanical.Results.UserDefinedResult not in solution_children:
+            user_defined_result = solution.AddUserDefinedResult()
+            user_defined_result.PropertyByName('CustomResultSource').InternalValue = 1
+            user_defined_result.Name = 'Temperature'
+            user_defined_result.PropertyByName('OutputUnitType').InternalValue = 49
+        else:
+            user_defined_result = solution.Children[solution_children.index(Ansys.ACT.Automation.Mechanical.Results.UserDefinedResult)]
+        user_defined_result.PropertyByName('ImportedFileName').InternalValue = os.path.join(working_directory, 'octTemperature')
+        user_defined_result.EvaluateAllResults()
+
+##ExtAPI.SelectionManager
+##ExtAPI.Tools.GetResultsDataFromFile

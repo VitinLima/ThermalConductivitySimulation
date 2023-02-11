@@ -1,0 +1,17 @@
+version,0
+analysis,
+num_sets,1
+storage_type,0
+unit,
+dim,
+location,Nodal
+shellLayer,1
+
+
+
+
+
+,step,sub_step,cumulative_index
+set,,,1
+Scoping,Data
+end_of_set

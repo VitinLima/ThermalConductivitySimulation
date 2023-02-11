@@ -1,2 +1,2 @@
-P = dot(cross(N(E(:,2),:)-N(E(:,1),:), N(E(:,3),:)-N(E(:,1),:), 2), N(E(:,4),:)-N(E(:,1),:), 2);
+P = dot(cross(program.analysis.Nodes(program.analysis.ElementNodeIds(:,2),:)-program.analysis.Nodes(program.analysis.ElementNodeIds(:,1),:), program.analysis.Nodes(program.analysis.ElementNodeIds(:,3),:)-program.analysis.Nodes(program.analysis.ElementNodeIds(:,1),:), 2), program.analysis.Nodes(program.analysis.ElementNodeIds(:,4),:)-program.analysis.Nodes(program.analysis.ElementNodeIds(:,1),:), 2);
 ids = P>0;

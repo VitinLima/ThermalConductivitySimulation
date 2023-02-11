@@ -1,4 +1,0 @@
-Node Number	X Location (m)	Y Location (m)	Z Location (m)	
-95	1,e-002	1,e-002	3,e-002	
-96	1,e-002	1,e-002	2,8e-002	
-128	8,e-003	1,e-002	3,e-002	

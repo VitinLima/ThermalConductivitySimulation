@@ -1,7 +1,9 @@
-disp('Solve system script initiated.');
+fdisp(program.logger, 'Solve system script initiated.');
 tic;
 
-U(!solvedU) = (K(!solvedU, !solvedU) - Kh(!solvedU,!solvedU))\(F(!solvedU) - K(!solvedU,solvedU)*U(solvedU) - Fku(!solvedU) - Fko(!solvedU) - Fh(!solvedU) - Fi(!solvedU));
-utd = true;
+solvedIdx = program.analysis.solvedU;
+unsolved_idx = !solvedIdx;
 
-disp(['Solve system script finilized. Execution time: ', num2str(toc), ' s']);
+program.analysis.U(unsolved_idx) = (program.analysis.K(unsolved_idx, unsolved_idx) - program.analysis.Kh(unsolved_idx,unsolved_idx))\(program.analysis.F(unsolved_idx) - program.analysis.K(unsolved_idx,solvedIdx)*program.analysis.U(solvedIdx) - program.analysis.Fku(unsolved_idx) - program.analysis.Fko(unsolved_idx) - program.analysis.Fh(unsolved_idx) - program.analysis.Fi(unsolved_idx));
+
+fdisp(program.logger, ['Solve system script finilized. Execution time: ', num2str(toc), ' s']);

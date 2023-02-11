@@ -1,21 +1,21 @@
-##trisurf([E(:,1) E(:,2) E(:,3)], N(:,1), N(:,2), N(:,3), U, 'facecolor', 'interp');
-##trisurf([E(:,1) E(:,2) E(:,4)], N(:,1), N(:,2), N(:,3), U, 'facecolor', 'interp');
-##trisurf([E(:,1) E(:,3) E(:,4)], N(:,1), N(:,2), N(:,3), U, 'facecolor', 'interp');
-##trisurf([E(:,2) E(:,3) E(:,4)], N(:,1), N(:,2), N(:,3), U, 'facecolor', 'interp');
+##trisurf([program.analysis.ElementNodeIds(:,1) program.analysis.ElementNodeIds(:,2) program.analysis.ElementNodeIds(:,3)], program.analysis.Nodes(:,1), program.analysis.Nodes(:,2), program.analysis.Nodes(:,3), program.analysis.U, 'facecolor', 'interp');
+##trisurf([program.analysis.ElementNodeIds(:,1) program.analysis.ElementNodeIds(:,2) program.analysis.ElementNodeIds(:,4)], program.analysis.Nodes(:,1), program.analysis.Nodes(:,2), program.analysis.Nodes(:,3), program.analysis.U, 'facecolor', 'interp');
+##trisurf([program.analysis.ElementNodeIds(:,1) program.analysis.ElementNodeIds(:,3) program.analysis.ElementNodeIds(:,4)], program.analysis.Nodes(:,1), program.analysis.Nodes(:,2), program.analysis.Nodes(:,3), program.analysis.U, 'facecolor', 'interp');
+##trisurf([program.analysis.ElementNodeIds(:,2) program.analysis.ElementNodeIds(:,3) program.analysis.ElementNodeIds(:,4)], program.analysis.Nodes(:,1), program.analysis.Nodes(:,2), program.analysis.Nodes(:,3), program.analysis.U, 'facecolor', 'interp');
 
 if ischar(idxE)
   if strcmp(idxE, 'all')
-    idx = 1:rows(E);
+    idx = 1:rows(program.analysis.ElementNodeIds);
   end
 else
   idx = idxE;
 end
 
-BF = findBoundaryFaces(E(idx,:));
-trisurf(BF, N(:,1), N(:,2), N(:,3), U, 'facecolor', 'interp');%, 'linestyle', 'none');
+BF = findBoundaryFaces(program.analysis.ElementNodeIds(idx,:));
+trisurf(BF, program.analysis.Nodes(:,1), program.analysis.Nodes(:,2), program.analysis.Nodes(:,3), program.analysis.U, 'facecolor', 'interp');%, 'linestyle', 'none');
 
-##Um = (U(E(:,1)) + U(E(:,2)) + U(E(:,3)) + U(E(:,4)))/4;
-##tetramesh(E, N);
+##Um = (program.analysis.U(program.analysis.ElementNodeIds(:,1)) + program.analysis.U(program.analysis.ElementNodeIds(:,2)) + program.analysis.U(program.analysis.ElementNodeIds(:,3)) + program.analysis.U(program.analysis.ElementNodeIds(:,4)))/4;
+##tetramesh(program.analysis.ElementNodeIds, program.analysis.Nodes);
 
 colormap(jet);
 colorbar;

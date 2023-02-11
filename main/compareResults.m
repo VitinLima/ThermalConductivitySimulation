@@ -1,13 +1,10 @@
-disp('Compare results script initiated.');
+fdisp(program.logger, 'Compare results script initiated.');
 tic;
 
-cd(problemDir);
-
-FID = fopen("NodeResults.txt");
+FID = fopen([program.working_directory, filesep, "Results", filesep, "Temperature"]);
 
 if FID==-1
-  disp(['Compare results script finilized. No results to compare. Execution time: ', num2str(toc), ' s']);
-  cd(programPWD);
+  fdisp(program.logger, ['Compare results script finilized. No results to compare. Execution time: ', num2str(toc), ' s']);
   return;
 end
 
@@ -32,9 +29,7 @@ end
 
 fclose(FID);
 
-cd(programPWD);
+fdisp(program.logger, ['Mean error: ', num2str(mean(abs(program.analysis.U-UA)))]);
+fdisp(program.logger, ['Std: ', num2str(std(abs(program.analysis.U-UA)))]);
 
-disp(['Mean error: ', num2str(mean(abs(U-UA)))]);
-disp(['Std: ', num2str(std(abs(U-UA)))]);
-
-disp(['Compare results script finilized. Execution time: ', num2str(toc), ' s']);
+fdisp(program.logger, ['Compare results script finilized. Execution time: ', num2str(toc), ' s']);
