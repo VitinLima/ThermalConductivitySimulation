@@ -14,7 +14,7 @@
      maximum size of a front matrix          =              78
      maximum size of a front trapezoid       =              78
      no. of floating point ops for factor    =      1.2090D+03
-     no. of floating point ops for solve     =      4.6800D+02
+     no. of floating point ops for solve     =      0.0000D+00
      ratio of flops for factor (min/max)     =          0.4981
      ratio of allocated memory (max/min)     =          1.0161
      negative pivot monitoring activated
@@ -23,11 +23,16 @@
      number of processes used                =               2
      number of threads per process used      =               1
      number of cores used                    =               2
-     time (cpu & wall) for structure input   =        0.000000        0.000131
-     time (cpu & wall) for ordering          =        0.000000        0.004396
-     time (cpu & wall) for other matrix prep =        0.000000        0.001449
-     time (cpu & wall) for value input       =        0.015625        0.000406
-     time (cpu & wall) for matrix distrib.   =        0.000000        0.013090
+     time (cpu & wall) for structure input   =        0.000000        0.066779
+     time (cpu & wall) for ordering          =        0.000000        0.111843
+     time (cpu & wall) for other matrix prep =        0.015625        0.041731
+     time (cpu & wall) for value input       =        0.000000        0.009366
+     time (cpu & wall) for matrix distrib.   =        0.015625        0.291239
+     time (cpu & wall) for numeric factor    =        0.046875        0.131992
+     computational rate (gflops) for factor  =        0.000026        0.000009
+     time (cpu & wall) for numeric solve     =        0.015625        0.703416
+     computational rate (gflops) for solve   =        0.000000        0.000000
+     effective I/O rate (GB/sec) for solve   =        0.000000        0.000000
 
      no input or output performed
 

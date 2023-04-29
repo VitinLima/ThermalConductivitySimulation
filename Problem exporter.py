@@ -110,7 +110,9 @@ engineeringToolkitPath = os.environ['EngineeringToolkit']
 if not os.path.exists(engineeringToolkitPath):
     raise ValueError('Engineering toolkit path not on system variables\nExiting')
 
-working_directory = os.path.join(ExtAPI.DataModel.AnalysisByName('Steady-State Thermal').WorkingDir, 'workingDirectory')
+#current_analysis = project.Model.Analyses[0]
+current_analysis = ExtAPI.DataModel.AnalysisByName('Steady-State Thermal 7')
+working_directory = os.path.join(current_analysis.WorkingDir, 'workingDirectory')
 if not os.path.exists(working_directory):
     os.mkdir(working_directory)
 
@@ -122,7 +124,6 @@ Model.Mesh.Update()
 
 project = ExtAPI.DataModel.Project
 project.UnitSystem = Ansys.Mechanical.DataModel.Enums.UserUnitSystemType.StandardNMM
-current_analysis = project.Model.Analyses[0]
 solution = current_analysis.Solution
 
 geometry = current_analysis.GeoData

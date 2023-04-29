@@ -12,16 +12,16 @@
 
 
  ***************************************************************
- *            ANSYS 2022 R1          LEGAL NOTICES             *
+ *         ANSYS MAPDL 2023 R1          LEGAL NOTICES          *
  ***************************************************************
  *                                                             *
- * Copyright 1971-2022 ANSYS, Inc.  All rights reserved.       *
+ * Copyright 1971-2023 Ansys, Inc.  All rights reserved.       *
  * Unauthorized use, distribution or duplication is            *
  * prohibited.                                                 *
  *                                                             *
- * Ansys is a registered trademark of ANSYS, Inc. or its       *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
  * subsidiaries in the United States or other countries.       *
- * See the ANSYS, Inc. online documentation or the ANSYS, Inc. *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
  * documentation CD or online help for the complete Legal      *
  * Notice.                                                     *
  *                                                             *
@@ -31,7 +31,7 @@
  * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
  * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
  * The software products and documentation are furnished by    *
- * ANSYS, Inc. or its subsidiaries under a software license    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
  * agreement that contains provisions concerning               *
  * non-disclosure, copying, length and nature of use,          *
  * compliance with exporting laws, warranties, disclaimers,    *
@@ -41,7 +41,7 @@
  * with the terms and conditions of that software license      *
  * agreement.                                                  *
  *                                                             *
- * ANSYS, Inc. is a UL registered                              *
+ * Ansys, Inc. is a UL registered                              *
  * ISO 9001:2015 company.                                      *
  *                                                             *
  ***************************************************************
@@ -50,60 +50,62 @@
  * re-export.                                                  *
  *                                                             *
  * For U.S. Government users, except as specifically granted   *
- * by the ANSYS, Inc. software license agreement, the use,     *
+ * by the Ansys, Inc. software license agreement, the use,     *
  * duplication, or disclosure by the United States Government  *
- * is subject to restrictions stated in the ANSYS, Inc.        *
+ * is subject to restrictions stated in the Ansys, Inc.        *
  * software license agreement and FAR 12.212 (for non-DOD      *
  * licenses).                                                  *
  *                                                             *
  ***************************************************************
 
- 2022 R1 
+ 2023 R1 
      
  Point Releases and Patches installed:   
      
- Ansys, Inc. Products 2022 R1
- Autodyn 2022 R1 
- SpaceClaim 2022 R1  
- CFX (includes CFD-Post) 2022 R1 
- Chemkin 2022 R1 
- EnSight 2022 R1 
- FENSAP-ICE 2022 R1  
- Fluent (includes CFD-Post) 2022 R1  
- Polyflow (includes CFD-Post) 2022 R1
- Forte (includes EnSight) 2022 R1
- TurboGrid 2022 R1   
- Aqwa 2022 R1
- Mechanical Products 2022 R1 
- ACIS Geometry Interface 2022 R1 
- AutoCAD Geometry Interface 2022 R1  
- Catia, Version 4 Geometry Interface 2022 R1 
- Catia, Version 5 Geometry Interface 2022 R1 
- Catia, Version 6 Geometry Interface 2022 R1 
- Creo Elements/Direct Modeling Geometry Interface 2022 R1
- Creo Parametric Geometry Interface 2022 R1  
- Inventor Geometry Interface 2022 R1 
- JTOpen Geometry Interface 2022 R1   
- NX Geometry Interface 2022 R1   
- Parasolid Geometry Interface  2022 R1   
- Solid Edge Geometry Interface 2022 R1   
- SOLIDWORKS Geometry Interface 2022 R1   
- Academic Student 2022 R1
+ Discovery 2023 R1   
+ Autodyn 2023 R1 
+ SpaceClaim 2023 R1  
+ CFX (includes CFD-Post) 2023 R1 
+ Chemkin 2023 R1 
+ EnSight 2023 R1 
+ FENSAP-ICE 2023 R1  
+ Fluent (includes CFD-Post) 2023 R1  
+ Polyflow (includes CFD-Post) 2023 R1
+ Forte (includes EnSight) 2023 R1
+ TurboGrid 2023 R1   
+ Aqwa 2023 R1
+ Speos 2023 R1   
+ Mechanical Products 2023 R1 
+ Material Calibration App 2023 R1
+ ACIS Geometry Interface 2023 R1 
+ AutoCAD Geometry Interface 2023 R1  
+ Catia, Version 4 Geometry Interface 2023 R1 
+ Catia, Version 5 Geometry Interface 2023 R1 
+ Catia, Version 6 Geometry Interface 2023 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2023 R1
+ Creo Parametric Geometry Interface 2023 R1  
+ Inventor Geometry Interface 2023 R1 
+ JTOpen Geometry Interface 2023 R1   
+ NX Geometry Interface 2023 R1   
+ Parasolid Geometry Interface  2023 R1   
+ Solid Edge Geometry Interface 2023 R1   
+ SOLIDWORKS Geometry Interface 2023 R1   
+ Academic Student 2023 R1
 
 
-          *****  ANSYS COMMAND LINE ARGUMENTS  *****
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
   BATCH MODE REQUESTED (-b)    = NOLIST
   INPUT FILE COPY MODE (-c)    = COPY
   DISTRIBUTED MEMORY PARALLEL REQUESTED
        2 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
     TOTAL OF     2 CORES REQUESTED
-  INPUT FILE NAME              = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr8C39\dummy.dat
-  OUTPUT FILE NAME             = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr8C39\solve.out
+  INPUT FILE NAME              = C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr974A\dummy.dat
+  OUTPUT FILE NAME             = C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr974A\solve.out
   START-UP FILE MODE           = NOREAD
   STOP FILE MODE               = NOREAD
 
- RELEASE= 2022 R1              BUILD= 22.1      UP20211129   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file0  18:26:12  NOV 03, 2022 CP=      0.109
+ RELEASE= 2023 R1              BUILD= 23.1      UP20221128   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file0  18:27:28  APR 03, 2023 CP=      0.250
 
 
  PARAMETER _DS_PROGRESS =     999.0000000    
@@ -112,34 +114,36 @@
 
 
 
- *** NOTE ***                            CP =       0.266   TIME= 18:26:12
- The /CONFIG,NOELDB command is not valid in a Distributed ANSYS          
- solution.  Command is ignored.                                          
+ *** NOTE ***                            CP =       0.500   TIME= 18:27:40
+ The /CONFIG,NOELDB command is not valid in a distributed memory         
+ parallel solution.  Command is ignored.                                 
 
- *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4366667    
+ *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4611111    
 
  TITLE= 
  FlatPlate--Steady-State Thermal 7 (H5)                                        
 
   ACT Extensions:
-      LSDYNA, 2021.1
+      LSDYNA, 2023.1
       5f463412-bd3e-484b-87e7-cbc0a665e474, wbex
+ /COM,     ANSYSMotion, 2023.1
+      20180725-3f81-49eb-9f31-41364844c769, wbex
   
 
  SET PARAMETER DIMENSIONS ON  _WB_PROJECTSCRATCH_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_PROJECTSCRATCH_DIR(1) = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr8C39\
+ PARAMETER _WB_PROJECTSCRATCH_DIR(1) = C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr974A\
 
  SET PARAMETER DIMENSIONS ON  _WB_SOLVERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_SOLVERFILES_DIR(1) = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\dp0\SYS-11\MECH\
+ PARAMETER _WB_SOLVERFILES_DIR(1) = C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\dp0\SYS-11\MECH\
 
  SET PARAMETER DIMENSIONS ON  _WB_USERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_USERFILES_DIR(1) = D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\user_files\
+ PARAMETER _WB_USERFILES_DIR(1) = C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\examples\AnsysProject\FlatPlate_files\user_files\
  --- Data in consistent NMM units. See Solving Units in the help system for more
 
  MPA UNITS SPECIFIED FOR INTERNAL    
@@ -153,16 +157,15 @@
 
  INPUT  UNITS ARE ALSO SET TO MPA 
 
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R1          22.1     ***
- DISTRIBUTED Ansys Mechanical Enterprise Academic Student      
-
- 00000000  VERSION=WINDOWS x64   18:26:12  NOV 03, 2022 CP=      0.266
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   18:27:41  APR 03, 2023 CP=      0.531
 
  FlatPlate--Steady-State Thermal 7 (H5)                                        
 
 
 
-          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
  *********** Nodes for the whole assembly ***********
  *********** Elements for Body 1 "Solid" ***********
  *********** Send User Defined Coordinate System(s) ***********
@@ -181,7 +184,7 @@
  ***************** Define Uniform Initial temperature ***************
 
 
- ***** ROUTINE COMPLETED *****  CP =         0.469
+ ***** ROUTINE COMPLETED *****  CP =         0.812
 
 
  --- Number of total nodes = 27
@@ -192,12 +195,12 @@
  --- Number of condensed parts = 0
  --- Number of total elements = 72
 
- *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4366667    
+ *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4636111    
  ****************************************************************************
  *************************    SOLUTION       ********************************
  ****************************************************************************
 
- *****  ANSYS SOLUTION ROUTINE  *****
+ *****  MAPDL SOLUTION ROUTINE  *****
 
 
  PERFORM A STATIC ANALYSIS
@@ -345,26 +348,26 @@
 
  *ENDIF
 
- *** NOTE ***                            CP =       0.531   TIME= 18:26:13
+ *** NOTE ***                            CP =       1.000   TIME= 18:27:58
  The automatic domain decomposition logic has selected the MESH domain   
  decomposition method with 2 processes per solution.                     
 
- *****  ANSYS SOLVE    COMMAND  *****
+ *****  MAPDL SOLVE    COMMAND  *****
 
- *** WARNING ***                         CP =       0.531   TIME= 18:26:13
+ *** WARNING ***                         CP =       1.016   TIME= 18:28:00
  Element shape checking is currently inactive.  Issue SHPP,ON or         
  SHPP,WARN to reactivate, if desired.                                    
 
- *** NOTE ***                            CP =       0.531   TIME= 18:26:13
+ *** NOTE ***                            CP =       1.016   TIME= 18:28:02
  The model data was checked and warning messages were found.             
   Please review output or errors file (                                  
- D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_Proje 
- ectScratch\Scr8C39\file0.err ) for these warning messages.              
+ C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\exam 
+ ples\AnsysProject\_ProjectScratch\Scr974A\file0.err ) for these         
+ warning messages.                                                       
 
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R1          22.1     ***
- DISTRIBUTED Ansys Mechanical Enterprise Academic Student      
-
- 00000000  VERSION=WINDOWS x64   18:26:13  NOV 03, 2022 CP=      0.531
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   18:28:03  APR 03, 2023 CP=      1.016
 
  FlatPlate--Steady-State Thermal 7 (H5)                                        
 
@@ -378,18 +381,19 @@
    OFFSET TEMPERATURE FROM ABSOLUTE ZERO . . . . .  273.15    
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
- *** WARNING ***                         CP =       0.531   TIME= 18:26:13
+ *** WARNING ***                         CP =       1.031   TIME= 18:28:04
  Material number 2 (used by element 97) should normally have at least    
  one MP or one TB type command associated with it.  Output of energy by  
  material may not be available.                                          
 
- *** NOTE ***                            CP =       0.531   TIME= 18:26:13
+ *** NOTE ***                            CP =       1.031   TIME= 18:28:04
  The step data was checked and warning messages were found.              
   Please review output or errors file (                                  
- D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_Proje 
- ectScratch\Scr8C39\file0.err ) for these warning messages.              
+ C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\exam 
+ ples\AnsysProject\_ProjectScratch\Scr974A\file0.err ) for these         
+ warning messages.                                                       
 
- *** NOTE ***                            CP =       0.531   TIME= 18:26:13
+ *** NOTE ***                            CP =       1.031   TIME= 18:28:05
  The conditions for direct assembly have been met.  No .emat or .erot    
  files will be produced.                                                 
 
@@ -459,11 +463,11 @@
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        48  SOLID278      0.016   0.000326
-        2         8  SURF152       0.031   0.003906
+        1        48  SOLID278      0.000   0.000000
+        2         8  SURF152       0.000   0.000000
         3         8  SURF152       0.000   0.000000
         4         8  SURF152       0.000   0.000000
- Time at end of element matrix formulation CP = 0.59375.                 
+ Time at end of element matrix formulation CP = 1.4375.                  
 
  DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
   Number of equations =          18,    Maximum wavefront =     10
@@ -476,7 +480,7 @@
   Total memory required for in-core solution       =     0.296 MB
   Total memory required for out-of-core solution   =     0.296 MB
 
- *** NOTE ***                            CP =       0.594   TIME= 18:26:13
+ *** NOTE ***                            CP =       1.469   TIME= 18:28:11
  The Distributed Sparse Matrix Solver is currently running in the        
  in-core memory mode.  This memory mode uses the most amount of memory   
  in order to avoid using the hard drive as much as possible, which most  
@@ -507,7 +511,7 @@
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
 
- *** ANSYS BINARY FILE STATISTICS
+ *** MAPDL BINARY FILE STATISTICS
   BUFFER SIZE USED= 16384
         0.062 MB WRITTEN ON ELEMENT SAVED DATA FILE: file0.esav
         0.062 MB WRITTEN ON ASSEMBLED MATRIX FILE: file0.full
@@ -518,27 +522,26 @@
  ****************************************************
  *************** FINISHED SOLVE FOR LS 1 *************
 
- *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4369444    
+ *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4705556    
 
  FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =         0.672
+ ***** ROUTINE COMPLETED *****  CP =         1.688
 
 
 
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R1          22.1     ***
- DISTRIBUTED Ansys Mechanical Enterprise Academic Student      
-
- 00000000  VERSION=WINDOWS x64   18:26:13  NOV 03, 2022 CP=      0.688
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   18:28:14  APR 03, 2023 CP=      1.750
 
  FlatPlate--Steady-State Thermal 7 (H5)                                        
 
 
 
-          ***** ANSYS RESULTS INTERPRETATION (POST1) *****
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
 
- *** NOTE ***                            CP =       0.688   TIME= 18:26:13
+ *** NOTE ***                            CP =       1.766   TIME= 18:28:14
  Reading results into the database (SET command) will update the current 
  displacement and force boundary conditions in the database with the     
  values from the results file for that load set.  Note that any          
@@ -553,28 +556,28 @@
 
  DATABASE WRITTEN ON FILE  parm.xml                                                                                                                                                                                                                                                            
 
- EXIT THE ANSYS POST1 DATABASE PROCESSOR
+ EXIT THE MAPDL POST1 DATABASE PROCESSOR
 
 
- ***** ROUTINE COMPLETED *****  CP =         0.688
+ ***** ROUTINE COMPLETED *****  CP =         1.906
 
 
 
  PRINTOUT RESUMED BY /GOP
 
- *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4369444    
+ *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  18.4705556    
 
- PARAMETER _PREPTIME =     0.000000000    
+ PARAMETER _PREPTIME =     9.000000000    
 
- PARAMETER _SOLVTIME =     1.000000000    
+ PARAMETER _SOLVTIME =     25.00000000    
 
  PARAMETER _POSTTIME =     0.000000000    
 
- PARAMETER _TOTALTIM =     1.000000000    
+ PARAMETER _TOTALTIM =     34.00000000    
 
  *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  1.00000000    
 
- *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.539271000E-01
+ *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.807842000E-01
 
  *GET  _SSMODE   FROM  ACTI  ITEM=SOLU SSMM  VALUE=  2.00000000    
 
@@ -584,21 +587,21 @@
  --- Total number of nodes = 27
  --- Total number of elements = 72
  --- Element load balance ratio = 1
- --- Time to combine distributed files = 5.39271E-02
+ --- Time to combine distributed files = 8.07842E-02
  --- Sparse memory mode = 2
  --- Number of DOF = 18
 
- EXIT ANSYS WITHOUT SAVING DATABASE
+ EXIT MAPDL WITHOUT SAVING DATABASE
 
 
  NUMBER OF WARNING MESSAGES ENCOUNTERED=          2
  NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
 
-+--------- D I S T R I B U T E D   A N S Y S   S T A T I S T I C S ------------+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
 
-Release: 2022 R1            Build: 22.1       Update: UP20211129   Platform: WINDOWS x64 
-Date Run: 11/03/2022   Time: 18:26     Process ID: 12840
-Operating System: Windows 10  (Build: 19043)
+Release: 2023 R1            Build: 23.1       Update: UP20221128   Platform: WINDOWS x64 
+Date Run: 04/03/2023   Time: 18:28     Process ID: 17524
+Operating System: Windows 10  (Build: 19045)
 
 Processor Model: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 
@@ -614,7 +617,7 @@ Number of processes requested           :    2
 Number of threads per process requested :    1
 Total number of cores requested         :    2 (Distributed Memory Parallel)               
 MPI Type: INTELMPI
-MPI Version: Intel(R) MPI Library 2019 Update 10 for Windows* OS
+MPI Version: Intel(R) MPI Library 2021.5 for Windows* OS
 
 
 GPU Acceleration: Not Requested
@@ -624,24 +627,25 @@ Input File: dummy.dat
 
   Core                Machine Name   Working Directory
  -----------------------------------------------------
-     0             DESKTOP-71B23Q0   D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr8C39
-     1             DESKTOP-71B23Q0   D:\Workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr8C39
+     0             DESKTOP-71B23Q0   C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr974A
+     1             DESKTOP-71B23Q0   C:\Users\160047412\Desktop\workbench\ThermalConductivitySimulation\examples\AnsysProject\_ProjectScratch\Scr974A
  
-Latency time from master to core     1 =    9.171 microseconds
+Latency time from master to core     1 =   13.233 microseconds
  
-Communication speed from master to core     1 =  2219.85 MB/sec
+Communication speed from master to core     1 =   400.57 MB/sec
 
-Total CPU time for main thread                    :        1.0 seconds
-Total CPU time summed for all threads             :        1.0 seconds
+Total CPU time for main thread                    :        2.2 seconds
+Total CPU time summed for all threads             :        2.2 seconds
 
-Elapsed time spent obtaining a license            :        0.4 seconds
-Elapsed time spent pre-processing model (/PREP7)  :        0.2 seconds
-Elapsed time spent solution - preprocessing       :        0.1 seconds
-Elapsed time spent computing solution             :        0.2 seconds
+Elapsed time spent obtaining a license            :        4.7 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        7.3 seconds
+Elapsed time spent solution - preprocessing       :        5.3 seconds
+Elapsed time spent computing solution             :        5.5 seconds
 Elapsed time spent solution - postprocessing      :        0.1 seconds
-Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.2 seconds
  
 Equation solver used                              :            Sparse (symmetric)
+Equation solver computational rate                :        0.0 Gflops
 
 Sum of memory used on all processes               :       86.0 MB
 Sum of memory allocated on all processes          :     3136.0 MB
@@ -650,25 +654,27 @@ Physical memory available                         :          6 GB
 Total amount of I/O written to disk               :        0.0 GB
 Total amount of I/O read from disk                :        0.0 GB
 
-+------ E N D   D I S T R I B U T E D   A N S Y S   S T A T I S T I C S -------+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
 
 
- *---------------------------------------------------------------------------*
- |                                                                           |
- |                       DISTRIBUTED ANSYS RUN COMPLETED                     |
- |                                                                           |
- |---------------------------------------------------------------------------|
- |                                                                           |
- | Ansys 2022 R1               Build 22.1         UP20211129     WINDOWS x64 |
- |                                                                           |
- |---------------------------------------------------------------------------|
- |                                                                           |
- | Database Requested(-db)  1024 MB    Scratch Memory Requested      1024 MB |
- | Maximum Database Used       1 MB    Maximum Scratch Memory Used     42 MB |
- |                                                                           |
- |---------------------------------------------------------------------------|
- |                                                                           |
- |        CP Time      (sec) =          1.000       Time  =  18:26:14        |
- |        Elapsed Time (sec) =          3.000       Date  =  11/03/2022      |
- |                                                                           |
- *---------------------------------------------------------------------------*
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2023 R1         Build 23.1         UP20221128    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)      1 MB     Max Scratch Used(Master)     42 MB |
+ |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)    42 MB |
+ |  Sum Database Used(All)         2 MB     Sum Scratch Used(All)        84 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          2.234       Time  =  18:28:16          |
+ |        Elapsed Time (sec) =         61.000       Date  =  04/03/2023        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*
