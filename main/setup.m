@@ -27,25 +27,29 @@ end
 
 BTN = questdlg(['Create log file at "', program.working_directory, '"?'], 'Log file');
 if strcmp(BTN, 'Yes')
-  program.logger = [program.working_directory, filesep, 'log.txt'];
+  program.logger_type = 'file';
+  program.logger_file = [program.working_directory, filesep, 'log.txt'];
 elseif strcmp(BTN, 'No')
-  program.logger = 'stdout';
+  program.logger_type = 'stdout';
+  program.logger_file = -1;
 else
   if program.is_gui
-    disp('No working directory given');
+    disp('Simulation cancelled.');
     return;
   else
     error('Simulation cancelled.');
   end
 end
 
-[FNAME, FPATH, ~] = uiputfile([], 'Save program as', [program.working_directory, filesep, 'EngSystem']);
+[FNAME, FPATH, ~] = uiputfile([], 'Save simulation as', [program.working_directory, filesep, 'EngSystem']);
 if !isnumeric(FPATH) && !isnumeric(FNAME)
   program.save_path = [FPATH, filesep, FNAME];
 else
   program.save_path = -1;
   disp('Simulation will not be saved.');
 end
+
+program.setup_ok = true;
 
 if preSetup
   save([program.working_directory, filesep, 'settings'], '-binary', 'program');

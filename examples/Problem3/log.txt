@@ -1,0 +1,9 @@
+All working fine
+Main script initiated.
+Load analysis script initiated.
+Loading mesh from file /mnt/325947A912590BDE/Workbench/ThermalConductivitySimulation/examples/Problem3/Meshing
+Detecting file format
+error: fgetl: invalid stream number = -1
+error: called from
+    loadFile at line 9 column 3
+    main at line 66 column 5

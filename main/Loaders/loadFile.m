@@ -1,8 +1,9 @@
 fdisp(program.logger, 'Load analysis script initiated.');
 tic;
 
-fdisp(program.logger, "Loading mesh");
-FID = fopen([program.working_directory, filesep, "Meshing"], 'r');
+mesh_file = [program.working_directory, filesep, "Meshing"];
+fdisp(program.logger, ["Loading mesh from file ", mesh_file]);
+FID = fopen(mesh_file, 'r');
 
 fdisp(program.logger, 'Detecting file format');
 l = fgetl(FID);
