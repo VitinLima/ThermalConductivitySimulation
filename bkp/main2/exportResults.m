@@ -1,1 +1,0 @@
-dlmwrite([program.working_directory, filesep, 'results.txt'], U);
